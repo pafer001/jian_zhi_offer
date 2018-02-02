@@ -17,9 +17,7 @@ public class DeleteNodeInList {
 			throw new Exception("list ���Ϸ�");
 		}
 		
-		
-		
-		
+
 	}
 
 }
