@@ -1,7 +1,12 @@
 package jian_zhi_offer.test08;
 
 /**
- * �ҳ���ת�����е���Сֵ������4,5,6,7,1,3
+ * 题目描述
+ *
+ * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个非递减序列的一个旋转，输出旋转数组的最小元素。
+ * 例如
+ * 数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，
+ * 该数组的最小值为1
  * @author puffer
  *
  */
@@ -12,52 +17,32 @@ public class FindMinInRotation {
 		
 		int data[] = {3,4,5,6,7,1,2};
 		try {
-			findMinInRotation(data, 0, 6);
+			findMinInRotation(data);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
-	public static void findMinInRotation(int data[], int start, int end) throws Exception {
-		
-		if(data == null || start < 0 || end < 0 || end < start) {
-			throw new Exception("�쳣����");
+
+
+	/**
+	 * 最大的数值后面是最小的
+	 * @param array
+	 */
+	public static void findMinInRotation(int array[])   {
+
+		if (array== null) {
+			return;
 		}
-		
-		int middle = (start + end) / 2;
-		if(data[middle] < data[middle-1]) {
-			if(data[middle] < data[middle+1]) {
-				System.out.println(data[middle]);
+
+		int target = array[0];
+		for (int tmp : array) {
+			if (tmp < target) {
+				System.out.println(tmp);
+				break;
 			}
-		} else {
-			if(data[middle] < data[middle + 1])
-				findMinInRotation(data, middle + 1, end);
-			else 
-				System.out.println(data[middle + 1]) ;
 		}
-	}
-	
-	public static int findMinPositionInRotation(int data[], int start, int end) throws Exception {
-		
-		if(data == null || start < 0 || end < 0 || end < start) {
-			throw new Exception("�쳣����");
-			
-		}
-		
-		int middle = (start + end) / 2;
-		if(data[middle] < data[middle-1]) {
-			if(data[middle] < data[middle+1]) {
-				return middle;
-			} else {
-				return -1;
-			}
-		} else {
-			if(data[middle] < data[middle + 1])
-				return findMinPositionInRotation(data, middle + 1, end);
-			else 
-				return middle + 1 ;
-		}
+
 	}
 
 }
