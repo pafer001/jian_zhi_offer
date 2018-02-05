@@ -1,4 +1,4 @@
-package leetcode.AddTwoSum;
+package exercise.AddTwoSum;
 
 /**
  * Created by pafer on 17-5-6.
