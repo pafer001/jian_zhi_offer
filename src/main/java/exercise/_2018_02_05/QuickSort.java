@@ -3,7 +3,7 @@ package exercise._2018_02_05;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int array[] = {3,6,1,8,9,4};
+        int array[] = {3,6,1,8,9,4,7};
         quick(0, array.length -1, array);
 
         for (int a : array) {
