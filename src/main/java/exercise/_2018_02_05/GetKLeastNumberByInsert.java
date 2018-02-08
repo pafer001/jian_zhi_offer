@@ -25,6 +25,18 @@ public class GetKLeastNumberByInsert {
      */
     public static int[] insertAndSort(int[] kLeastArray, int index, int e) {
 
+
+        if (index == kLeastArray.length - 1) {
+
+            if (kLeastArray[kLeastArray.length -1] < e) {
+                return kLeastArray;
+            }
+            for (int i =0 ; i < kLeastArray.length; i++) {
+
+            }
+        }
+
+
         if (kLeastArray[index] > e) {
             return kLeastArray;
         }
